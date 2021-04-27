@@ -102,12 +102,6 @@
         border-top: 1px solid var(--gray-light);
         transition: .5s;
     }
-
-    /* scroll */
-/*     #menu.active.top-60{
-        top: 60px;
-    } */
-
 }
 
 
