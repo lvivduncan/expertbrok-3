@@ -1,0 +1,80 @@
+/* зліва фото, справа текст */
+.images-text{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 50px;
+    margin: 100px 20px;
+}
+
+@media(max-width:776px) {
+    .images-text{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:450px) {
+    .images-text{
+        margin: 50px 20px;
+    }
+}
+
+.images-text .images{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-gap: 30px;
+}
+
+@media(max-width:996px) {
+    .images-text .images{
+        grid-template-columns: 1fr;
+    }
+}
+
+@media(max-width:776px) {
+    .images-text .images{
+        display: none;
+    }
+}
+
+.images-text .images img{
+    width: 900px;
+    height: 300px;
+    object-fit: cover;
+    object-position: center center;
+    transition: .5s;
+}
+
+.images-text .text-content{
+    display: flex;
+    flex-direction: column;
+}
+
+.images-text .text-content :last-child{
+    margin-top: auto;
+    text-align: right;
+    color: var(--cyan-dark)
+}
+
+.images-text .text-content h1{
+    margin: 0 0 50px;
+    position: relative;
+}
+
+@media(max-width:450px) {
+    .images-text .text-content h1{
+        font-size: 34px
+    }
+}
+
+
+.images-text .text-content h1::before{
+    content: '';
+    display: inline-block;
+    width: 60px;
+    height: 5px;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    background: var(--black);
+    border-radius: 10px;
+}
