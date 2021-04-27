@@ -3,7 +3,7 @@
     margin: 100px 20px;
 }
 
-@media(max-width:450px) {
+@media(max-width:776px) {
     .comments{
         margin: 50px 20px;
     }   
